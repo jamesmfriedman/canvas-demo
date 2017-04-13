@@ -57,5 +57,13 @@ Things I didn't get to
 - accessibility. Other than basic alt tags on images and semantic elements, I didn't dig into any aria labeling.
 - button interactions. All of those icons are really icon buttons which need to have some sort of hover / touch effect
 - touch interactions. I would add FastClick and have specific touch friendly effects. 
-- flare. there are bunch of subtle effects that could be added to enhance the card grid experience. Gravity could be added to the cards, and some sticky drag interactions to make them feel like they're not just stuck floating there.
+- flare. there are bunch of subtle effects that could be added to enhance the card grid experience. Entry animations would be nice. Gravity could be added to the cards, and some sticky drag interactions to make them feel like they're not just stuck floating there.
 
+Bonus Hour
+==========
+
+I wanted to deploy this to gh-pages to share with the team, and of course that came with its own set of gotchas.
+- I had to add babel in, because UglifyJS fails on ES6, plus browser support
+- I forgot gh-pages has a relative root, so all of my paths were broken. I wanted it to be dynamic, so I messed with the paths and base href, but ultimately I had to put the final public path in the config of the minified version. In a real world scenario, I generally have multiple environment configurations for webpack to build with.
+- I finally got it up on gh-pages, but I had to dynamically modify the base href which causes the initial image request in the preloader to break. This would be fixed by injecting the final public path into the ejs template, or just by deploying to a normal static server.
+- Overall, had a good time :)
