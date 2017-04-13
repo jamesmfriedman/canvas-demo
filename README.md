@@ -10,16 +10,16 @@ Tools
 
 I built this demo in AngularJS, SASS, and HTML using Webpack as my build system.
 
-I opted to use AngularJS for a variety of reasons. I have a starter-kit I built that I've kept relatively up to date for the past year which allowed me to immediately jump into coding and no work on the build system. My last major project was in AngularJS, so it's stil at the front of mind, and most importantly I knew I work quickly. While I like TypeScript for its robustness and typesafety, it's not something I would use to hack something together quickly.
+I opted to use AngularJS for a variety of reasons. I have a starter-kit I built that I've kept relatively up to date for the past year which allowed me to immediately jump into coding and not work on the build system. My last major project was in AngularJS, so it's still at the front of mind, and most importantly I knew I could work quickly. While I like TypeScript for its robustness and typesafety, it's not something I would use to hack something together quickly.
 
 I used material-icons because I knew I could get them up and running quickly and that they offered icons that at least had some approximation to the mock. I'm assuming canvas has its own SVG or font-icon library.
 
-In more recent projects I've been pushing more for a completely generated public / static directory leveraging Webpacks file loader to manage versions and place files accordingly. It seemed a bit overkill for this, so static assets are just dropped in the public folder.
+In more recent projects I've been pushing more for a completely generated public / static directory leveraging Webpack's file loader to manage versions and place files accordingly. It seemed a bit overkill for this, so static assets are just dropped in the public folder.
 
 Process
 ========
 
-The directions were relatively straight forward with 3 phases and a statement that said this shouldn't take more than 4 hours. The actual task could and should take significantly longer than that when accounting for accessibility, internationalization, reusability, and overall durability, but given the limitation I decided to use the 4 hours as follows:
+The directions were relatively straight forward with 3 phases and a statement that said this shouldn't take more than 4 hours. The actual task could and should take significantly longer than that when accounting for accessibility, internationalization, reusability, testability, and overall durability, but given the limitation I decided to use the 4 hours as follows:
 
 1. General Layout, Create Course card
 2. Dashboard Layout, Responsive grid handling
@@ -34,7 +34,7 @@ I only had the PDF to work off of, but I pulled the card into Sketch and saw it 
 Grid Layout
 ===========
 
-There are so many ways to do this, and over the years I think I've tried just about all of them. If the cards were fluid height (Pinterest style layout), Isotope / Masonry might've been preferrable. I don't generally like using it because of the extra calculations and I've always felt I should be able to do this with just CSS. CSS columns allow you to achieve a similar kind of view as Isotope, but you have to layout your elements semantically incorrect (top to bottom instead of left to right) and you run into weird issues for endless scrolling lists. CSS Grids could help, but they're bleeding edge, don't have good polyfills, and Canvas' browser support is currently IE 11 and up.
+There are so many ways to do this, and over the years I think I've tried just about all of them. If the cards were fluid height (Pinterest style layout), Isotope / Masonry might've been preferrable. I don't generally like using it because of the extra calculations and depependencies, and I've always felt I should be able to do this with just CSS. CSS columns allow you to achieve a similar kind of view as Isotope, but you have to layout your elements semantically incorrect (top to bottom instead of left to right) and you run into weird issues for endless scrolling lists. CSS Grids could help, but they're bleeding edge, don't have good polyfills, and Canvas' browser support is currently IE 11 and up.
 
 I decided to use good old CSS floats and responsive breaks to make sure the grid is always centered evenly and renders at a size appropriate to the screen. It's setup mobile first, adding styles for larger screens.
 
@@ -45,17 +45,17 @@ AngularJS has a built in lib called Angular Resource which has an idiomatic way 
 
 API Authorization wasn't hard to handle but there are a ton of considerations which aren't accounted for. I opted to get the token before I bootstrapped my app since it's likely in a real world scenario they wouldn't be able to do anything in the app without it anyways. Here are some thoughts.
 
-- The response headers have no-cache on them so theres really no way to tell what the TTL is for the token. If there was, I'd cache it in sessionStorage.
-- I don't have an retry logic in there, right now if the token call fails, the app would never bootstrap.
+- The response headers have no-cache on them so there is really no way to tell what the TTL is for the token. If there was, I'd cache it in sessionStorage (localStorage if multi-user per tab support isn't necessary).
+- I don't have any retry logic in there, right now if the token call fails, the app would never bootstrap.
 - You could bootstrap first and then get the token, but you would end up having to have some global api promise that all of your endpoints defer to.
-- I sent the token over as a header, seemed gross to send it as part of the request URL. I had a typo in my code when trying to add the header which wasted about 15 minutes of my time.
+- I sent the token over as a header, it seemed gross to send it as part of the request URL. I had a typo in my code when trying to add the header which wasted about 15 minutes of my time.
 
 The demo api just had enough for the textual content. Some other things that are needed are the course image and course color, or some sort of categorical rule to color them by.
 
 Things I didn't get to
 ======================
-- Cross browser testing. I did a quick check in Safari and Firefox. Firefox had a few flex box issues, and I didn't have time to fire up my vm for IE / Edge.
-- internationalization. Usually I would check for the ugliest lenghts of headings to see where it breaks.
+- Cross browser testing. I built this in Chrome. I did a quick check in Safari and Firefox. Firefox had a few flex box issues, and I didn't have time to fire up my vm for IE / Edge.
+- internationalization. Usually I would check for the ugliest lengths of headings to see where it breaks.
 - accessibility. Other than basic alt tags on images and semantic elements, I didn't dig into any aria labeling.
 - button interactions. All of those icons are really icon buttons which need to have some sort of hover / touch effect
 - touch interactions. I would add FastClick and have specific touch friendly effects. 
