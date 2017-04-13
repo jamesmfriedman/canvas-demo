@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <base href="">
+  <base id="base" href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Canvas Demo</title>
+  <script>        
+    document.getElementById('base').href = window.location.pathname;
+  </script>
+
   <style>
     html {
       background: black;
@@ -20,5 +24,5 @@
 	<jf-app>
     <div class="preloader"><img src="/img/instructure-reverse.png"/></div>
   </jf-app>
-<script type="text/javascript" src="/commons.js?1cd4ce32d78f2e54f03d"></script><script type="text/javascript" src="/dist/styles.js?1cd4ce32d78f2e54f03d"></script><script type="text/javascript" src="/dist/polyfills.js?1cd4ce32d78f2e54f03d"></script><script type="text/javascript" src="/dist/vendors.js?1cd4ce32d78f2e54f03d"></script><script type="text/javascript" src="/dist/app.js?1cd4ce32d78f2e54f03d"></script></body>
+<script type="text/javascript" src="/commons.js?1d4abc7ca49659c0422f"></script><script type="text/javascript" src="/dist/styles.js?1d4abc7ca49659c0422f"></script><script type="text/javascript" src="/dist/polyfills.js?1d4abc7ca49659c0422f"></script><script type="text/javascript" src="/dist/vendors.js?1d4abc7ca49659c0422f"></script><script type="text/javascript" src="/dist/app.js?1d4abc7ca49659c0422f"></script></body>
 </html>
