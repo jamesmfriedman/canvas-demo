@@ -21,7 +21,7 @@ angular.element(document).ready(function() {
 	const initInjector = angular.injector(['ng']);
 	const $http = initInjector.get('$http');
 
-	$http.post('http://canvas-api.herokuapp.com/api/v1/tokens').then(resp => {
+	$http.post('https://canvas-api.herokuapp.com/api/v1/tokens').then(resp => {
 		app.constant('CANVAS_API_TOKEN', resp.data.token);
 		angular.bootstrap(document, ['App']);
 	});
