@@ -9,6 +9,7 @@
     "dev": "npm start",
     "dev:min": "export NODE_ENV='dev' BUILD_ENV='min' && webpack-dev-server --hot",
     "build": "export NODE_ENV='prod' BUILD_ENV='min' && webpack",
+    "deploy": "npm run build && cd ../ && git push origin `git subtree split --prefix web/public master`:gh-pages --force",
     "test": "export NODE_ENV='test' BUILD_ENV='min' && karma start --single-run",
     "test:watch": "export NODE_ENV='test' BUILD_ENV='min' && karma start"
   },
