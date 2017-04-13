@@ -2,10 +2,23 @@
 <html>
 <head>
   <base href="/">
-  <title>Angular Starter Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Canvas Demo</title>
+  <style>
+    html {
+      background: black;
+    }
+    .preloader {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
 </head>
 <body>
-	{{ hello }}
-	<example-component></example-component>
-<script type="text/javascript" src="/commons.js?5448e8fd664231b40e98"></script><script type="text/javascript" src="/dist/styles.js?5448e8fd664231b40e98"></script><script type="text/javascript" src="/dist/polyfills.js?5448e8fd664231b40e98"></script><script type="text/javascript" src="/dist/vendors.js?5448e8fd664231b40e98"></script><script type="text/javascript" src="/dist/app.js?5448e8fd664231b40e98"></script></body>
+	<jf-app>
+    <div class="preloader"><img src="/img/instructure-reverse.png"/></div>
+  </jf-app>
+<script type="text/javascript" src="/commons.js?b3e9e10b57efe127fb10"></script><script type="text/javascript" src="/dist/styles.js?b3e9e10b57efe127fb10"></script><script type="text/javascript" src="/dist/polyfills.js?b3e9e10b57efe127fb10"></script><script type="text/javascript" src="/dist/vendors.js?b3e9e10b57efe127fb10"></script><script type="text/javascript" src="/dist/app.js?b3e9e10b57efe127fb10"></script></body>
 </html>
