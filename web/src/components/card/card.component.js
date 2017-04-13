@@ -33,7 +33,7 @@ angular.module('App.components').component('jfCard', {
 
 		function ngOnInit() {
 			// Monkey patch this until we get a real image url
-			vm.course.imageUrl = '/img/jurassic-park.jpg';
+			vm.course.imageUrl = 'img/jurassic-park.jpg';
 			
 		}
 	}
