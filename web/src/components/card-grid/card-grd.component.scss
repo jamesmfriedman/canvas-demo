@@ -1,0 +1,27 @@
+$padding-sm: 2rem;
+$padding-md: 4rem;
+
+jf-card-grid {
+	display: block;
+
+	&:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+
+	jf-card {
+		float: left;
+	}
+
+	@include screen-sm {
+		padding: $padding-sm;
+	}
+
+	@include screen-md {
+		padding: $padding-md;
+	}
+}

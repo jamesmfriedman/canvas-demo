@@ -1,0 +1,65 @@
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+@mixin screen-xs {
+    @content;
+}
+
+@mixin screen-xs-only {
+    @media (max-width: $screen-sm - 1px) {
+        @content;
+    }
+}
+
+@mixin screen-sm {
+    @media (min-width: $screen-sm) {
+        @content;
+    }
+}
+
+@mixin screen-sm-only {
+    @media (min-width: $screen-sm) and (max-width: $screen-md - 1px) {
+        @content;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin screen-md {
+    @media (min-width: $screen-md) {
+        @content;
+    }
+}
+
+@mixin screen-md-only {
+    @media (min-width: $screen-md) and (max-width: $screen-lg - 1px) {
+        @content;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin screen-lg {
+    @media (min-width: $screen-lg) {
+        @content;
+    }
+}
+
+@mixin screen-sm-only {
+    @media (min-width: $screen-lg) and (max-width: $screen-xl - 1px) {
+        @content;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin screen-xl {
+    @media (min-width: $screen-xl) {
+        @content;
+    }
+}
+
+@mixin screen-xl-only {
+    @media (min-width: $screen-xl) {
+        @content;
+    }
+}

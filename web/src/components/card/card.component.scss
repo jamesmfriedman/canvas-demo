@@ -1,0 +1,139 @@
+$card-ratio: 4 / 3;
+
+$card-count-xs: 1;
+$card-gutter-xs: 2rem;
+
+$card-count-sm: 2;
+$card-gutter-sm: 2rem;
+
+$card-count-md: 3;
+$card-gutter-md: 4rem;
+
+$card-count-lg: 4;
+$card-gutter-lg: $card-gutter-md;
+
+$card-count-xl: 5;
+$card-gutter-xl: $card-gutter-lg;
+
+jf-card {
+	width: calc(100vw / #{$card-count-xs});
+	height: calc(100vw / #{$card-count-xs} * #{$card-ratio});
+	padding: $card-gutter-xs;
+	color: #008ae8;
+	display: flex;
+	flex-direction: column;
+
+	article {
+		background-color: white;
+		border: 1px solid #d1d1d1;
+		width: 100%;
+		height: 100%;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		transition: .3s;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 0 16px 32px rgba(0,0,0,.2);
+		}
+	}	
+	
+	figure {
+		margin: 0;
+		flex: 1 0 33%;
+		background: currentColor;
+		width: 100%;
+		position: relative;
+	}
+
+	.edit-icon {
+		color: white;
+		position: absolute;
+		top: 3rem;
+		right: 3rem;
+	}
+
+
+	h2 {
+		font-size: 4.5rem;
+		font-weight: 600;
+		margin: 0;
+		color: #0093e7;
+	}
+
+	h3 {
+		font-size: 3.5rem;
+		text-transform: uppercase;
+		font-weight: 500;
+		margin: 1rem 0 0 0;
+		letter-spacing: .5px;
+	}
+
+	header {
+		padding: 3rem 5rem;
+		flex: 0 0 auto;
+	}
+
+	.content {
+		flex: 1;
+		font-size: 12px;
+		overflow: hidden;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			background: linear-gradient(transparent, white);
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 8rem;
+		}
+	}
+
+	.arrow-icon {
+		color: #0093e7;
+		position: absolute;
+		bottom: 0;
+		right: 4rem;
+	}
+
+	p {
+		padding: 0 5rem;
+		margin: 0;
+	}
+
+	footer {
+		border-bottom: 1rem solid currentColor;
+		display: flex;
+		height: 16rem;
+		align-items: center;
+	}
+
+	footer jf-icon {
+		flex: 1;
+	}
+	
+	@include screen-sm {
+		width: calc( (100vw - #{$card-gutter-sm} * 2) / #{$card-count-sm});
+		height: calc(100vw / #{$card-count-sm} * #{$card-ratio});
+		padding: 3rem $card-gutter-sm;
+	}
+
+	@include screen-md {
+		width: calc( (100vw - #{$card-gutter-md} * 2) / #{$card-count-md});
+		height: calc(100vw / #{$card-count-md} * #{$card-ratio});
+		padding: $card-gutter-md;
+	}
+
+	@include screen-lg {
+		width: calc( (100vw - #{$card-gutter-lg} * 2) / #{$card-count-lg});
+		height: calc(100vw / #{$card-count-lg} * #{$card-ratio});
+	}
+
+	@include screen-xl {
+		width: calc( (100vw - #{$card-gutter-xl} * 2) / #{$card-count-xl});
+		height: calc(100vw / #{$card-count-xl} * #{$card-ratio});
+	}
+}

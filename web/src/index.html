@@ -2,9 +2,23 @@
 <html>
 <head>
   <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Canvas Demo</title>
+  <style>
+    html {
+      background: black;
+    }
+    .preloader {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
 </head>
 <body>
-	<jf-app>Loading...</jf-app>
+	<jf-app>
+    <div class="preloader"><img src="/img/instructure-reverse.png"/></div>
+  </jf-app>
 </body>
 </html>
