@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <base href="">
+  <base id="base" href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Canvas Demo</title>
+  <script>        
+    document.getElementById('base').href = window.location.pathname;
+  </script>
+
   <style>
     html {
       background: black;
