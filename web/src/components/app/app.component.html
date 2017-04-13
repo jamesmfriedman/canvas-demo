@@ -5,7 +5,11 @@
 </nav>
 
 <section id="main-content">
-    <jf-card-grid>
+    <!--ACTUAL CONTENT-->
+    <jf-card-grid ng-init="vm.fakeCourses = 'Here are some fake courses'.split('')">
         <jf-card ng-repeat="course in vm.courses track by course.id" course="course"></jf-card>
+
+        <jf-card ng-repeat="course in vm.fakeCourses track by $index" course="{name:'Sample Course', code: 'JMF 1101', description: 'This is a sample course card'}"></jf-card>       
     </jf-card-grid>
+    
 </section>

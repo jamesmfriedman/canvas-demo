@@ -25,6 +25,4 @@ angular.element(document).ready(function() {
 		app.constant('CANVAS_API_TOKEN', resp.data.token);
 		angular.bootstrap(document, ['App']);
 	});
-	
-
 });
