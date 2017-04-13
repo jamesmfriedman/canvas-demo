@@ -1,5 +1,5 @@
 angular.module('App.common').service('canvasApi', function(CANVAS_API_TOKEN, $resource){
-    const API_URL =  'http://canvas-api.herokuapp.com';
+    const API_URL =  'https://canvas-api.herokuapp.com';
     console.log(CANVAS_API_TOKEN);
     const RESOURCE_DEFAULT_ACTIONS = {
         get: {
