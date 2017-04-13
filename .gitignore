@@ -1,0 +1,6 @@
+node_modules/
+public/dist/*
+public/index.html
+.DS_Store
+*.sublime-workspace
+*.sublime-project
