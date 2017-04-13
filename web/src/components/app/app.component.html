@@ -6,13 +6,6 @@
 
 <section id="main-content">
     <jf-card-grid>
-        <jf-card></jf-card>
-        <jf-card ng-style="{color: '#00a116'}"></jf-card>
-        <jf-card ng-style="{color: '#b13295'}"></jf-card>
-        <jf-card ng-style="{color: '#d93945'}"></jf-card>
-        <jf-card ng-style="{color: '#0082d2'}"></jf-card>
-        <jf-card ng-style="{color: '#e76313'}"></jf-card>
-        <jf-card></jf-card>
-        <jf-card ng-style="{color: '#00a116'}"></jf-card>
+        <jf-card ng-repeat="course in vm.courses track by course.id" course="course"></jf-card>
     </jf-card-grid>
 </section>
