@@ -24,7 +24,7 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, '../public/'),
 		filename: 'dist/[name].js',
-		publicPath: '/'
+		publicPath: ''
     },
     resolve: {
 		modules: ['./src', 'web_modules', 'node_modules']
@@ -38,7 +38,7 @@ module.exports = {
 		    {
 		        test: /\.html$/,
 		        exclude: /index\.html/,
-		        loaders: ['ng-cache-loader']
+		        loaders: ['ng-cache-loader?-url']
 		    }
 		]
 	},
