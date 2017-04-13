@@ -1,0 +1,22 @@
+body {
+    font-size: 3.5rem;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.color-default {
+    color: rgba(0,0,0,.8);
+}
+
+.color-secondary {
+    color: rgba(0,0,0,.4);
+}
+
+
+.color-tertiary {
+    color: rgba(0,0,0,.2);
+}
+
+.color-inherit {
+    color: inherit;
+}

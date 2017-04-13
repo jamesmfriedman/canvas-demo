@@ -33,7 +33,7 @@ module.exports = {
 		loaders: [
 			{
 		        test: /\.scss$/,
-		        loaders: ['style-loader', 'css-loader?sourceMap', 'postcss-loader?config=./config/postcss.config.js', 'sass-loader?sourceMap', 'import-glob-loader']
+		        loaders: ['style-loader', 'css-loader', 'postcss-loader?config=./config/postcss.config.js', 'sass-loader?sourceMap', 'import-glob-loader']
 		    },
 		    {
 		        test: /\.html$/,
