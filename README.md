@@ -1,6 +1,8 @@
 Canvas Demo
 -----------
 
+View on GH Pages [https://jamesmfriedman.github.io/canvas-demo/](https://jamesmfriedman.github.io/canvas-demo/)
+
 This was a fun little assignment. I've been doing card and grid based layouts for a long time, and there are certainly a lot of ways to accomplish it. I'm going to outline some of my thoughts along the way, and why I made the decisions I did.
 
 Tools
