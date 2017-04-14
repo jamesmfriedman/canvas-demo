@@ -1,10 +1,13 @@
 $nav-height: 18rem;
 
 jf-app {
-	background-color: #f5f5f6;
 	display: block;
 	flex: 1;
 	width: 100%;
+
+	&.loaded {
+		background-color: #f5f5f6;
+	}
 
 	nav#main {
 		height: $nav-height;

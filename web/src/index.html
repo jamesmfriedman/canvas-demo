@@ -11,18 +11,25 @@
   <style>
     html {
       background: black;
+      font-family: sans-serif;
     }
     .preloader {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .preloader div {
+      margin-left: 60px;
     }
   </style>
 </head>
 <body>
-	<jf-app>
-    <div class="preloader"><img src="img/instructure-reverse.png"/></div>
+	<jf-app ng-class="'loaded'">
+    <div class="preloader"><img src="img/instructure-reverse.png"/><div>loading...</div></div>
   </jf-app>
 </body>
 </html>
