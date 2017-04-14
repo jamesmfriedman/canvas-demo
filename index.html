@@ -11,18 +11,25 @@
   <style>
     html {
       background: black;
+      font-family: sans-serif;
     }
     .preloader {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .preloader div {
+      margin-left: 60px;
     }
   </style>
 </head>
 <body>
-	<jf-app>
-    <div class="preloader"><img src="img/instructure-reverse.png"/></div>
+	<jf-app ng-class="'loaded'">
+    <div class="preloader"><img src="img/instructure-reverse.png"/><div>loading...</div></div>
   </jf-app>
-<script type="text/javascript" src="https://jamesmfriedman.github.io/canvas-demo/commons.js?5ddadec95dbeca7f08da"></script><script type="text/javascript" src="https://jamesmfriedman.github.io/canvas-demo/dist/styles.js?5ddadec95dbeca7f08da"></script><script type="text/javascript" src="https://jamesmfriedman.github.io/canvas-demo/dist/polyfills.js?5ddadec95dbeca7f08da"></script><script type="text/javascript" src="https://jamesmfriedman.github.io/canvas-demo/dist/vendors.js?5ddadec95dbeca7f08da"></script><script type="text/javascript" src="https://jamesmfriedman.github.io/canvas-demo/dist/app.js?5ddadec95dbeca7f08da"></script></body>
+<script type="text/javascript" src="https://jamesmfriedman.github.io/canvas-demo/commons.js?9be4a502cf4750db29de"></script><script type="text/javascript" src="https://jamesmfriedman.github.io/canvas-demo/dist/styles.js?9be4a502cf4750db29de"></script><script type="text/javascript" src="https://jamesmfriedman.github.io/canvas-demo/dist/polyfills.js?9be4a502cf4750db29de"></script><script type="text/javascript" src="https://jamesmfriedman.github.io/canvas-demo/dist/vendors.js?9be4a502cf4750db29de"></script><script type="text/javascript" src="https://jamesmfriedman.github.io/canvas-demo/dist/app.js?9be4a502cf4750db29de"></script></body>
 </html>
